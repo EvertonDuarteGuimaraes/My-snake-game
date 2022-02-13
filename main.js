@@ -6,6 +6,7 @@ snake[0] = {
     x: 8 * box,
     y: 8 * box,
 };
+let hd = (document.getElementById('head').src = '/img/head.jpg');
 
 function creat_screen_background() {
     context.fillStyle = 'lightblue';
@@ -14,7 +15,7 @@ function creat_screen_background() {
 
 function creat_snake() {
     for (i = 0; i < snake.length; i++) {
-        context.fillStyle = 'blue';
+        context.drawImage(hd, 32, 32);
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
