@@ -1,29 +1,19 @@
 let game_screen = document.getElementById('game_field');
 let context = game_screen.getContext('2d');
-let box = 32;
 let snake = [];
-snake[0] = {
-    x: 8 * box,
-    y: 8 * box,
-};
-let hd = (document.getElementById('head').src = '/img/head.jpg');
+
+const snake_head = document.getElementById('head');
+
+snake_head.addEventListener('load', (e) => {
+    context.drawImage(snake_head, 8, 8, 32, 32);
+});
 
 function creat_screen_background() {
     context.fillStyle = 'lightblue';
-    context.fillRect(0, 0, 16 * box, 16 * box);
-}
-
-function creat_snake() {
-    for (i = 0; i < snake.length; i++) {
-        context.drawImage(hd, 32, 32);
-        context.fillRect(snake[i].x, snake[i].y, box, box);
-    }
+    context.fillRect(0, 0, 512, 512);
 }
 
 creat_screen_background();
-creat_snake();
-
-console.log(head);
 
 //1-leia que que está acontecendo
 //2-atualizar os objetos com informações necessárias

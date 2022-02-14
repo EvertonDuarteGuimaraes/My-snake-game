@@ -17,9 +17,12 @@ body {
     align-items: center;
     background-color: rgb(41, 34, 34);
 }
-
+/*=====MAIN=====*/
 img {
     height: 32px;
     width: 32px;
 }
-/*=====MAIN=====*/
+
+.hiden {
+    display: none;
+}
